@@ -55,7 +55,7 @@ background-color: antiquewhite;
 
 .Home, .Message {
   display: grid;
-  grid-template-columns: 300px 3fr 1fr;
+  grid-template-columns: 240px 5fr 2fr;
   grid-template-rows: clamp(64px, 84px, 128px) 1fr;
   min-height: 100vh;
 }
