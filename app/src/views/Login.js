@@ -19,15 +19,15 @@ const Login = () => {
         
         <div className="signup">
             <a href="app\src\views\Signup.js">
-                <button>Sign Up</button>
+               Sign Up
             </a>
         </div>
 
-        <div>
-           <a>
+        {/* <div>
+           <a href="">
                 <button></button>
             </a>
-        </div>
+        </div> */}
 
         </div>
        
