@@ -1,27 +1,28 @@
+import '../css/Profile.css';
+
 const Profile = () => {
     return(
         <div className="Profile">
 
             <div className="corner">
-                <link><h2>Home</h2></link>
-                <link><h2>Messages</h2></link>
+               <h2>Home</h2><br/>
             </div>
 
-            <div className="profileimage">
-                <img alt=""></img>
-                <h2>Name of Profile</h2>
-                <p>username</p>
+            <div className="profileimage"> <br></br>
+                <img alt=""></img> <br/>
+                <h2>Name of Profile</h2> <br/>
+                <p>username</p> <br/>
             </div>
 
-            <div className="aboutme">
+            <div className="aboutme"> <br/> <br/><br/><br/>
                 <h2>About Me</h2> <br/>
                 <ul id="schoolprofile">
-                    <li>School:</li>
-                    <li>Program:</li>
-                    <li>Year</li>
-                    <li>Future Goals</li>
+                    <p>School:</p>
+                    <p>Program:</p>
+                    <p>Year</p>
+                    <p>Future Goals:</p>
                 </ul>
-                <h2>Summary</h2>
+                <h2></h2>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p><br/>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p> <br/>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p> <br/>
