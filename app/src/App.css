@@ -36,3 +36,61 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+/* =========================== HOME STYLES =========================== */
+
+.Home {
+  display: grid;
+  grid-template-columns: 300px 3fr 1fr;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
+}
+
+/* Sidebar Styles */
+
+.Sidebar-Container {
+  border: 2px solid #000000;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.Profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.Sidebar-List {
+  list-style-type: none;
+}
+
+.Settings-Help {
+  list-style-type: none;
+}
+
+/* Header Styles */
+
+.Header-Container {
+  border: 2px solid black;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/* Main Styles */
+
+.Main-Container {
+  border: 2px solid black;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* Status Styles */
+
+.Status-Container {
+  border: 2px solid black;
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
