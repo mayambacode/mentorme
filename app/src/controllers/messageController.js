@@ -11,4 +11,4 @@ const sendMessage = (event) => {
     event.target.parentElement.firstChild.value = '';
 }
 
-export default sendMessage;
+module.exports = { sendMessage };
