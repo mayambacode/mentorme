@@ -17,6 +17,14 @@ const Login = () => {
 
         </form>
 
+        <div className="signup">
+            <button><a href="">Sign Up</a></button>
+        </div>
+
+        <div>
+            <button></button>
+        </div>
+
         </div>
        
     );
