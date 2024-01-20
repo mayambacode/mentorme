@@ -36,3 +36,110 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+
+/* =========================== HOME STYLES =========================== */
+
+.Home {
+  display: grid;
+  grid-template-columns: 300px 3fr 1fr;
+  grid-template-rows: clamp(64px, 84px, 128px) 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+
+.Sidebar-Container {
+  border: 2px solid #000000;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: clamp(64px, 84px, 128px) 3fr 1fr;
+  text-align: left;
+  
+}
+
+.Profile {
+  display: flex;
+  flex-direction: row;
+  grid-row: 1 / 2;
+  border: 2px solid red;
+}
+
+.Profile * {
+  padding: 0;
+  margin: 0;
+}
+
+.Sidebar-List {
+  list-style-type: none;
+  grid-row: 2 / 3;
+}
+
+.Settings-Help {
+  list-style-type: none;
+  grid-row: 3 / 4;
+  border-top: 1px solid grey;
+}
+
+/* Header Styles */
+
+.Header-Container {
+  border: 2px solid black;
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Main Styles */
+
+.Main-Container {
+  border: 2px solid black;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.Main-Heading {
+  padding: 0;
+  margin: 0;
+  height: 10%;
+}
+
+.Cards {
+  border: 2px solid red;
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: calc(100% - 40px);
+  height: calc(90% - 40px);
+  align-items: center;
+  justify-items: center;
+}
+
+.Card {
+  border: 2px solid black;
+  height: clamp(100px, 100%, 200px);
+  width: clamp(180px, 100%, 360px);
+  display: flex;
+}
+
+.Card-List {
+  list-style-type: none;
+  text-align: left;
+}
+
+/* Current Selected Styles */
+
+.Current-Container {
+  border: 2px solid black;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
