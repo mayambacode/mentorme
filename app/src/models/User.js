@@ -39,6 +39,46 @@ const userSchema = new mongoose.Schema({
     chats: [chatSchema]
 });
 
+userSchema.statics.sendMessage = async (userID, chatID, messageContent) => {
+    try{
+        //Find or create the user
+        let user = await this.findById(userID);
+
+        if (!user) {
+            throw new Error('User not found');
+        }
+
+        //Find or create the chat
+        let chat = user.chats.find(chat => chat.chatID === chatID);
+
+        if (!chat) {
+            chat = {
+                chatID,
+                participants: [],
+                message: []
+            };
+            user.chats.push(chat);
+        };
+
+        // Add the message to the chat
+        const message = {
+            sender: userID,
+            content: messageContent,
+            timestamp: new Date()
+        };
+
+        chat.messages.push(message);
+
+        await user.save();
+
+        return user;
+    }
+    catch (err) {
+        console.error(err);
+        throw new Error(err);
+    }
+}
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

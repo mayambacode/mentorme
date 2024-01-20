@@ -1,14 +1,14 @@
-const sendMessage = (event) => {
+const createMessage = (event, userID) => {
     event.preventDefault();
 
     const messageInfo = {
-        name: "user name",
-        messageText: event.target.parentElement.firstChild.value
-    }
-
-    console.log(messageInfo)
+        userID: userID,
+        content: event.target.parentElement.firstChild.valuem
+    };
 
     event.target.parentElement.firstChild.value = '';
+
+    return messageInfo;
 }
 
-export default sendMessage;
+module.exports = { createMessage };

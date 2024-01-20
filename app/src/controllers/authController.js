@@ -1,24 +1,23 @@
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "../firebase";
-import { auth } from '../firebase';
+const { signInWithEmailAndPassword, createUserWithEmailAndPassword } = require('../firebase');
+const { auth } = require('../');
 
-const authController = {
-    login(email, password) {
-        signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential);
-        }).catch((err) => {
-            console.log(err);
-        })
-    },
-    signup(email, password) {
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-    }
+const login = (email, password) => {
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        console.log(userCredential);
+    }).catch((err) => {
+        console.log(err);
+    })
 }
 
-export default authController;
+const signup = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        console.log(userCredential);
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+}
+
+module.exports = { login, signup };
