@@ -16,13 +16,17 @@ const Login = () => {
             <input id="submitBtn" type="submit"></input>
 
         </form>
-
+        
         <div className="signup">
-            <button><a href="">Sign Up</a></button>
+            <a href="app\src\views\Signup.js">
+                <button>Sign Up</button>
+            </a>
         </div>
 
         <div>
-            <button></button>
+           <a>
+                <button></button>
+            </a>
         </div>
 
         </div>
