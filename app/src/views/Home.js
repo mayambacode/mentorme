@@ -42,7 +42,18 @@ const Home = () => {
                 
                 <div className="Cards">
 
-                    <div className="Card"></div>
+                    <div className="Card">
+                        <img className="Card-Img" alt="A smiling mentor"></img>
+                        <div className="Card-Content">
+                            <h5>Mentor #1</h5>
+                            <ul className="Card-List">
+                                <li>Major: Computer Science</li>
+                                <li>Year: 4</li>
+                                <li>Mentor Rating: 4.5/5</li>
+                            </ul>
+                            <button>Connect</button>
+                        </div>
+                    </div>
                     
                     <div className="Card"></div>
 
