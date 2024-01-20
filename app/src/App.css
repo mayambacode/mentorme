@@ -134,12 +134,22 @@ max-height: 5%;
   text-align: left;
 }
 
+.Sidebar-Container {
+  border: 2px solid black;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+
 /* Current Selected Styles */
 
 .Current-Container {
   border: 2px solid black;
   grid-column: 3 / 4;
   grid-row: 2 / 3;
+  text-align: left;
 }
 
 /* =========================== MESSAGE STYLES =========================== */
@@ -183,4 +193,15 @@ max-height: 5%;
 .Name-Time {
   display: flex;
 
+}
+
+.Messager {
+  display: flex;
+  border: 2px solid black;
+  height: 64px;
+}
+
+.Profile {
+  display: flex;
+  border: 2px solid red;
 }
