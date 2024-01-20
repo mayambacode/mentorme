@@ -24,4 +24,4 @@ jobs:
         run: npm ci --prefix api/
 
       - name: Run tests
-        run: npm test --prefix auth/
+        run: npm test --prefix api/
