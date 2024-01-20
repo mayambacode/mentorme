@@ -13,10 +13,9 @@ function App() {
           <Routes>
             <Route exact path='/' element={<Home />}></Route>
             <Route exact path='/auth' element={<Auth />}></Route>
-            <Route exact path='/profile'></Route>
-            <Profile />
-            <Route exact path='/message'></Route>
-            <Message />
+            {/* <Route exact path='/profile'></Route>
+            <Profile /> */}
+            <Route exact path='/message' element={<Message />}></Route>
           </Routes>
         </div>
       </div>
