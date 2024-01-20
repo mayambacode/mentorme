@@ -2,7 +2,8 @@ const Profile = () => {
     return(
         <div className="Profile">
 
-        
+        <img alt=""></img>
+
             <h1>Name of Profile</h1>
             
 

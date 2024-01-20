@@ -9,6 +9,18 @@ const Login = () => {
             <h3>Password:</h3><br/> <input id="pass" type="password"></input><br/>
             <input id="submitBtn" type="submit"></input>
         </form>
+        
+        <div className="signup">
+            <a href="app\src\views\Signup.js">
+               Sign Up
+            </a>
+        </div>
+
+        {/* <div>
+           <a href="">
+                <button></button>
+            </a>
+        </div> */}
 
         </div>
     );
