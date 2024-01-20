@@ -13,7 +13,7 @@ const Login = () => {
         </form>
         
         <div className="signup">
-            <Link href="app\src\views\Signup.js">
+            <Link to="/Signup.js">
                Sign Up
             </Link>
         </div>

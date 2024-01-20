@@ -14,16 +14,16 @@ const Signup = () => {
                 <h1>Sign Up</h1>
 
                     <form>
-                        <input type="text" className="fullname" value="Full Name"></input> <br/>
+                        <input type="text" className="fullname" placeholder="Full Name"></input> <br/>
                     
-                        <input type="email" className="email" value="Email"></input> <br/>
-                        <input type="password" className="password" value="Password"></input><br/> 
-                        <input type="password" className="confirmpassword" value="Confirm Password"></input><br/> 
+                        <input type="email" className="email" placeholder="Email"></input> <br/>
+                        <input type="password" className="password" placeholder="Password"></input><br/> 
+                        <input type="password" className="confirmpassword" placeholder="Confirm Password"></input><br/> 
                         <inpu type="submit" value="Sign Up"></inpu>
                     </form>
 
                         <div>
-                            <Link href="app\src\views\Login.js">Login</Link>
+                            <Link to="/Login.js">Login</Link>
                         </div>
                     </div>
                 </div>
