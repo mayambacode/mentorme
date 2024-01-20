@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import '../css/Signup.css';
 const Signup = () => {
     return (
-        <div className="left">
+        <div className="split left">
             
                 <div className="title">
                     <h1>Welcome to Mentor Me</h1>
                     <h2>Find Your Mentor, Find Your Way</h2>
                 </div>
                
-               <div className="right">
+               <div className="split right">
                     <div className='signupform'>
                 <h1>Sign Up</h1>
 
