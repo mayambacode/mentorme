@@ -1,3 +1,5 @@
+import sendMessage from '../controllers/messageController.js'
+
 const Message = () => {
     return (
         <div className="Message">
@@ -12,8 +14,7 @@ const Message = () => {
                         <li>Events</li>
                     </ul>
                 </nav>
-
-
+                
 
 
                 <ul className="Settings-Help">
@@ -105,8 +106,11 @@ const Message = () => {
                 </div>
 
                 <div className="Send-Message">
-
-                    <input type="text" placeholder="Enter a message"></input>
+                    <form>
+                        <input type="text" placeholder="Enter a message"></input>
+                        <input type="submit" onClick={sendMessage} value="Send"></input>
+                    </form>
+                    
                 </div>
                 
             </div>
