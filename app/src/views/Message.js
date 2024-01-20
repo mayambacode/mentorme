@@ -1,4 +1,4 @@
-import sendMessage from '../controllers/chatController.js'
+import { createMessage } from '../helpers/chatHelper';
 
 const Message = () => {
     return (
@@ -108,7 +108,7 @@ const Message = () => {
                 <div className="Send-Message">
                     <form>
                         <input type="text" placeholder="Enter a message"></input>
-                        <input type="submit" onClick={sendMessage} value="Send"></input>
+                        <input type="submit" onClick={createMessage} value="Send"></input>
                     </form>
                     
                 </div>
