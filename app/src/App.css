@@ -44,151 +44,38 @@
 }
 
 
+body{
+background-color: antiquewhite;
+ 
+}
 
 
-
-/* =========================== HOME STYLES =========================== */
 
 .Home, .Message {
   display: grid;
   grid-template-columns: 300px 3fr 1fr;
   grid-template-rows: clamp(64px, 84px, 128px) 1fr;
   min-height: 100vh;
+  margin-top: 200px;
 }
 
-/* Sidebar Styles */
+/* Styles for the h3 tag */
+.Login h3 {
+  display: inline-block;
+  margin-bottom: 20px; /* Add some space below the h3 tag */
+}
 
-.Sidebar-Container {
-  border: 2px solid #000000;
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: clamp(64px, 84px, 128px) 3fr 1fr;
+/* Styles for the user and password inputs */
+#user,
+#pass {
   text-align: left;
-  
+  padding: 1.5em;
+  border-radius: 1em;
+  margin-bottom: 10px; /* Add some space between the inputs */
+  width: 300px; /* Adjust the width as needed */
 }
 
-.Profile {
-  display: flex;
-  flex-direction: row;
-  grid-row: 1 / 2;
-  border: 2px solid red;
-}
-
-.Profile * {
-  padding: 0;
-  margin: 0;
-}
-
-.Sidebar-List {
-  list-style-type: none;
-  grid-row: 2 / 3;
-}
-
-.Settings-Help {
-  list-style-type: none;
-  grid-row: 3 / 4;
-  border-top: 1px solid grey;
-}
-
-/* Header Styles */
-
-.Header-Container {
-  border: 2px solid black;
-  grid-column: 2 / 4;
-  grid-row: 1 / 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-/* Main Styles */
-
-.Main-Container {
-  border: 2px solid black;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.Main-Heading {
-  padding: 0;
-  margin: 0;
-  height: 10%;
-}
-
-.Cards {
-  border: 2px solid red;
-  display: grid;
-  gap: 12px;
-  padding: 18px;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  width: calc(100% - 40px);
-  height: calc(90% - 40px);
-  align-items: center;
-  justify-items: center;
-}
-
-.Card {
-  border: 2px solid black;
-  height: clamp(100px, 100%, 200px);
-  width: clamp(180px, 100%, 360px);
-  display: flex;
-}
-
-.Card-List {
-  list-style-type: none;
-  text-align: left;
-}
-
-/* Current Selected Styles */
-
-.Current-Container {
-  border: 2px solid black;
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-}
-
-/* =========================== MESSAGE STYLES =========================== */
-
-.Conversation-Container {
-  border: 2px solid black;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background-color: red;
-}
-
-.User-Message {
-  width: 100%;
-  height: 64px;
-  border: 2px solid green;
-  display: flex;
-  background-color: grey;
-
-}
-
-.My-Message {
-  background-color: whitesmoke;
-}
-
-.Send-Message {
-  width: 100%;
-  height: 84px;
-  background-color: greenyellow;
-}
-
-.Message-Formatter {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  
-}
-
-.Name-Time {
-  display: flex;
-
+#img {
+  max-width: 5%;
+  max-height: 5%; 
 }
