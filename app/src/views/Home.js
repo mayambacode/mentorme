@@ -29,10 +29,31 @@ const Home = () => {
             <div className="Header-Container">
 
                 <h1>Mentor List</h1>
+                <div className="Header-Container">
+                    <input type="text"></input>
+                    <div className="Icons">Icons go here</div>
+                </div>
                 
+
             </div>
             
-            <div className="Main-Container">Main</div>
+            <div className="Main-Container">
+                <h2 className="Main-Heading">Mentors</h2>
+                
+                <div className="Cards">
+
+                    <div className="Card"></div>
+                    
+                    <div className="Card"></div>
+
+                    <div className="Card"></div>
+
+                    <div className="Card"></div>
+
+                </div>
+
+                <div className="Calendar"></div>
+            </div>
             
             <div className="Status-Container">Current</div>
             
