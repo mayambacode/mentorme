@@ -1,4 +1,4 @@
-import sendMessage from '../controllers/messageController.js'
+import sendMessage from '../controllers/chatController.js'
 
 const Message = () => {
     return (
