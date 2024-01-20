@@ -1,8 +1,13 @@
+import { Link } from 'react-router-dom';
+
 const Signup = () => {
     return (
         <div className="Signup">
             
-                
+                <div className="mentorgraphics">
+                    <h1>Welcome to Mentor Me</h1>
+                    <h2>Find Your Mentor, Find Your Way</h2>
+                </div>
                
                <div className="signupform">
 
@@ -18,7 +23,7 @@ const Signup = () => {
                  </form>
 
                     <div>
-                        <a href="app\src\views\Login.js">Login</a>
+                        <Link href="app\src\views\Login.js">Login</Link>
                     </div>
 
                 </div>
