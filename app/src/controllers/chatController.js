@@ -11,4 +11,13 @@ const createMessage = (event, userID) => {
     return messageInfo;
 }
 
+const createConversation = (event) => {
+    // add to 
+}
+
+const newConversation = (event) => {
+    // const connections = () => {} // query for connections to DM
+    // 
+}
+
 module.exports = { createMessage };
