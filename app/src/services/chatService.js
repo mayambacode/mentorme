@@ -1,3 +1,4 @@
+import Chat from '../models/Chat.js';
 import User from '../models/User.js';
 
 const startChat = async (req, res) => {
@@ -28,11 +29,11 @@ const sendMessage = async (req, res) => {
     }
 }
 
-const test = async (req, res) => {
-    const { id } = req.body;
-    try{
-        const result = await User.findById(id);
-        res.status(200).json(result);
+const getChat = async (req, res) => {
+    const { chatID } = req.body;
+    try {
+        const messages = await Chat.getMessages(chatID);
+        res.status(400).json({ Chat: messages });
     }
     catch (err) {
         console.log(err);
@@ -40,5 +41,5 @@ const test = async (req, res) => {
     }
 }
 
-const chat = { sendMessage, startChat, test };
+const chat = { sendMessage, startChat, getChat };
 export default chat;
