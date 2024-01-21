@@ -9,8 +9,10 @@
   }
   
   .profileimage {
-    width: 20%;
     text-align: center;
+    position: relative;
+    left: 230px;
+
   }
   
   .profileimage img {
@@ -20,8 +22,11 @@
   }
   
   .aboutme {
-    width: 50%;
+   
     margin-top: 20px;
+    position: relative;
+    top: 200px;
+    left: 50px;
   }
   
   ul#schoolprofile {
@@ -36,3 +41,35 @@
   
   /* Add more styling as needed for the about me section */
   
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #090707;
+}
+
+h4 {
+    float: left;
+    padding: 5px;
+}
+
+
+h4 Link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    padding: 50px;
+  }
+  
+  h4:hover {
+    background-color: #111;
+    padding: auto;
+    margin-bottom: 10px;
+  }
+
+  p {
+
+  }

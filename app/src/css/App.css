@@ -216,27 +216,5 @@ max-height: 5%;
 
 .Profile {
   display: flex;
-  border: 2px solid red;
-}
-
-.New-Conversation {
-  border: 2px solid black;
-  border-radius: 12px;
-  margin: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.New-Conversation-Button {
-  height: 36px;
-  width: 36px;
-  /* padding: 24px; */
-  border-radius: 12px;
-  background-color: grey;
-  font-size: 24px;
-  border: 2px solid #000;
-  color: white;
-  text-align: center;
-  text-justify: center;
+  /* border: 2px solid red; */
 }
