@@ -1,13 +1,12 @@
-const express = require('express');
-const auth = require('../services/authService');
-const chat = require('../services/chatService');
+import express from 'express';
+import chat from '../services/chatService.js';
 
 const routes = express.Router();
 
-routes.post("/api/login", auth.login);
-routes.post("/api/signup", auth.signup);
-routes.post("/api/logout", auth.logout);
+// routes.post("/api/login", auth.login);
+// routes.post("/api/signup", auth.signup);
+// routes.post("/api/logout", auth.logout);
 
 routes.post("/api/sendMessage", chat.sendMessage);
 
-module.exports = routes;
+export default routes;

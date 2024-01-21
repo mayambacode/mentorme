@@ -1,5 +1,4 @@
-const mongoose = require('mongoose');
-
+import mongoose from 'mongoose';
 
 const messageSchema = new mongoose.Schema({
     sender: {
@@ -27,16 +26,26 @@ const chatSchema = new mongoose.Schema({
 });
 
 const userSchema = new mongoose.Schema({
-    username: {
+    userID: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     email: {
         type: String, 
         required: true,
         unique: true
     },
-    chats: [chatSchema]
+    chats: [chatSchema],
+    year: {
+        type: Number
+    },
+    program: {
+        type: String
+    },
+    bio: {
+        type: String
+    }
 });
 
 userSchema.statics.sendMessage = async (userID, chatID, messageContent) => {
@@ -81,4 +90,4 @@ userSchema.statics.sendMessage = async (userID, chatID, messageContent) => {
 
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User;

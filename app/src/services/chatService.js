@@ -1,4 +1,4 @@
-const User = require('../models/User');
+import User from '../models/User.js';
 
 const sendMessage = async (req, res) => {
     const { userID, content } = req.body;
@@ -6,4 +6,5 @@ const sendMessage = async (req, res) => {
     User.create({ userID, content });
 }
 
-module.exports = { sendMessage };
+const chat = { sendMessage };
+export default chat;

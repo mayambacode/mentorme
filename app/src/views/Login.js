@@ -1,6 +1,24 @@
 import { Link } from 'react-router-dom';
+import { signInWithEmailAndPassword } from '../firebase.js';
+import { auth } from '../firebase.js';
 
 const Login = () => {
+    const firebaseLogin = async (email, password) => {
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+    
+            if (!user) {
+                throw new Error('Login failed');
+            }
+    
+            return user;
+        }
+        catch (err) {
+            throw new Error(err);
+        }
+    }
+
     return (
         <div id="Login">
 
