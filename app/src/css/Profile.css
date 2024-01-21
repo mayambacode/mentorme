@@ -31,12 +31,10 @@
   }
   
   .aboutme {
-    top: 50px;
     margin-top: -50px;
     float: center; 
-    
-
-   
+   display: flex;
+   flex-direction: column;
 
   }
   
@@ -104,7 +102,7 @@ h4 Link {
     text-align: left;
      width: 100px;
      float: left;
-     height: 300px;
+     height: 1px;
 }
 
 #justin, #michael, #tom, #iman {
