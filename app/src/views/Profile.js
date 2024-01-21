@@ -16,9 +16,13 @@ const Profile = () => {
             <div className="profileimage"> <br></br>
                 <img src='./images/jungkook.jpg' alt="jung kook"></img> <br/>
                 <h2>Jung Kook</h2> <br/>
-                
             </div>
-
+        <div className='friendlist'>
+            <img></img>
+            <img></img>
+            <img></img>
+            <img></img>
+        </div>
             <div className="aboutme"> <br/> <br/><br/><br/>
                 <h2>About Me</h2> <br/>
                 <ul id="schoolprofile">
@@ -33,10 +37,13 @@ const Profile = () => {
 
             <div className="summary">
             <h2>Summary</h2>
-                <p>I'm a Computer Science student at Sheridan College.</p><br/>
+            <div className='paragraph'>
+            <p>I'm a Computer Science student at Sheridan College.</p><br/>
                 <p>I'm interested in Cloud Computing using Google Cloud.</p> <br/>
                 <p>My goal is to finish school and get a job at a FAANG company.</p> <br/>
                 <p>On my free time I love singing with my friends.</p> <br/>
+            </div>
+                
                 
             </div>
         

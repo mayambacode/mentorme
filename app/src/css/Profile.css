@@ -2,6 +2,7 @@
     display: flex;
     padding: 20px;
     flex-direction: column;
+    background-color: rgb(176, 173, 194);
   }
   
   .corner {
@@ -10,8 +11,11 @@
     
   }
   .corner{
-    background-color: aqua;
+    background-color: rgb(51, 76, 114);
     padding-top: 5px;
+    padding-bottom: 9px;
+    border-radius: 56px;
+
   }
   
   .profileimage {
@@ -89,4 +93,7 @@ h4 Link {
   }
 .titleinfo {
     font-weight: bold;
+}
+.paragraph {
+    margin:30px;
 }
