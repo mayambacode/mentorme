@@ -33,10 +33,13 @@ const Profile = () => {
 
             <div className="summary">
             <h2>Summary</h2>
-                <p>I'm a Computer Science student at Sheridan College.</p><br/>
+            <div className='paragraph'>
+            <p>I'm a Computer Science student at Sheridan College.</p><br/>
                 <p>I'm interested in Cloud Computing using Google Cloud.</p> <br/>
                 <p>My goal is to finish school and get a job at a FAANG company.</p> <br/>
                 <p>On my free time I love singing with my friends.</p> <br/>
+            </div>
+                
                 
             </div>
         
