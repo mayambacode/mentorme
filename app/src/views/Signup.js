@@ -1,21 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/Signup.css';
-import { createUserWithEmailAndPassword } from '../firebase.js';
-import { auth } from '../firebase.js';
 
 const Signup = () => {
-    const firebaseSignup = async (email, password) => {
-        try {
-            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-            const user = userCredential.user;
-    
-            return user;
-        }
-        catch (err) {
-            throw new Error(err);
-        }
-    }
-
     return (
         <div className="SignupLeft">
             
