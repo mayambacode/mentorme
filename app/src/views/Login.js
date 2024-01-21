@@ -6,7 +6,7 @@ const Login = () => {
 
         <h1>Mentor Me</h1>
 
-        <form className='d-flex justify-content-center align-items-center'>
+        <form className='d-flex flex-column justify-content-center align-items-center'>
             <h3 className='p-2'>Email:</h3>
             <input className='p-2' id="user" type="email" name="username"></input>
             <h3 className='p-2'>Password:</h3>
@@ -16,14 +16,13 @@ const Login = () => {
         
         <div className="d-flex align-items-center">
             <Link className='btn button-primary' href="app\src\views\Signup.js"/>
-            <div className="signup"><div></div>
-                <Link to="/Signup.js">
-                Sign Up
-                </Link>
-            </div>
+            <Link to="/Signup.js">
+               Sign Up
+            </Link>
         </div>
-    </div>
+        </div>
     );
+
 }
 
 export default Login;
