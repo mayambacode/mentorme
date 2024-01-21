@@ -1,25 +1,25 @@
 import mongoose from 'mongoose';
 
-const messageSchema = new mongoose.Schema({
-    sender: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    content: {
-        type: String,
-        required: true
-    },
-    timestamp: {
-        type: Date,
-        default: Date.now }
-});
-
 const chatSchema = new mongoose.Schema({
     participants: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User' }],
-    messages: [messageSchema]
+    messages: []
 });
+
+chatSchema.statics.addNewMessage = async function(message) {
+    try{
+        const chatID = message.chatID;
+        const chat = await this.findOne(chatID);
+        
+        chat.messages.append(message);
+        await chat.save();
+        return "Message sent";
+    }
+    catch (err) {
+        throw new Error(err);
+    }
+}
 
 const Chat = mongoose.model('Chat', chatSchema);
 export default Chat;
