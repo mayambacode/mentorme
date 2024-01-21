@@ -1,17 +1,22 @@
 .Profile {
     display: flex;
     padding: 20px;
+    flex-direction: column;
   }
   
   .corner {
-    width: 20%;
+    width: 100%;
     text-align: left;
+    
+  }
+  .corner{
+    background-color: aqua;
+    padding-top: 5px;
   }
   
   .profileimage {
     text-align: center;
-    position: relative;
-    left: 230px;
+    
 
   }
   
@@ -22,11 +27,11 @@
   }
   
   .aboutme {
+    top: 50px;
+    margin-top: -50px;
+
    
-    margin-top: 20px;
-    position: relative;
-    top: 200px;
-    left: 50px;
+
   }
   
   ul#schoolprofile {
@@ -41,17 +46,18 @@
   
   /* Add more styling as needed for the about me section */
   
-nav {
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #090707;
+   
 }
 
 h4 {
     float: left;
     padding: 5px;
+    margin-bottom: 0;
 }
 
 
@@ -64,12 +70,23 @@ h4 Link {
     padding: 50px;
   }
   
-  h4:hover {
+  /* h4:bold {
     background-color: #111;
     padding: auto;
     margin-bottom: 10px;
+    
+  } */
+
+  .nav > * {
+    /* margin-bottom: -8px; */
+  }
+  .home, .message, .about {
+    padding: 8px 40px 0 40px;
   }
 
-  p {
-
+  .summary {
+    margin-top: 40px;
   }
+.titleinfo {
+    font-weight: bold;
+}
