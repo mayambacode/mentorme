@@ -16,9 +16,13 @@ const Profile = () => {
             <div className="profileimage"> <br></br>
                 <img src='./images/jungkook.jpg' alt="jung kook"></img> <br/>
                 <h2>Jung Kook</h2> <br/>
-                
             </div>
-
+        <div className='friendlist'>
+            <img></img>
+            <img></img>
+            <img></img>
+            <img></img>
+        </div>
             <div className="aboutme"> <br/> <br/><br/><br/>
                 <h2>About Me</h2> <br/>
                 <ul id="schoolprofile">
