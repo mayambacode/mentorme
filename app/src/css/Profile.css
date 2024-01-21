@@ -1,0 +1,38 @@
+.Profile {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .corner {
+    width: 20%;
+    text-align: left;
+  }
+  
+  .profileimage {
+    width: 20%;
+    text-align: center;
+  }
+  
+  .profileimage img {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 50%;
+  }
+  
+  .aboutme {
+    width: 50%;
+    margin-top: 20px;
+  }
+  
+  ul#schoolprofile {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul#schoolprofile p {
+    margin: 0;
+  }
+  
+  /* Add more styling as needed for the about me section */
+  
