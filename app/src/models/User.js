@@ -1,42 +1,19 @@
 import mongoose from 'mongoose';
-
-const messageSchema = new mongoose.Schema({
-    sender: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    content: {
-        type: String,
-        required: true
-    },
-    timestamp: {
-        type: Date,
-        default: Date.now }
-});
-
-const chatSchema = new mongoose.Schema({
-    chatId: {
-        type: mongoose.Schema.Types.ObjectId,
-        require: true
-    },
-    participants: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User' }],
-    messages: [messageSchema]
-});
+import Chat from './Chat.js';
+import bcrypt from 'bcrypt';
 
 const userSchema = new mongoose.Schema({
-    userID: {
-        type: String,
-        required: true,
-        unique: true
-    },
     email: {
         type: String, 
         required: true,
         unique: true
     },
-    chats: [chatSchema],
+    password: {
+        type: String,
+        require: true,
+        minLength: [6, 'Minimum password length is 6']
+    },
+    chats: [Number],
     year: {
         type: Number
     },
@@ -48,44 +25,66 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-userSchema.statics.sendMessage = async (userID, chatID, messageContent) => {
+userSchema.statics.createNewRoom = async function(firstUser, secondUser) {
+    try {
+        const participants = [
+            firstUser,
+            secondUser
+        ];
+
+        const chat = await Chat.create({ participants: participants, messages: [] });
+        const chatID = chat._id.toString();
+        return { chatID: chatID, message: "Chat created" };
+    }
+    catch (err) {
+        throw new Error(err);
+    }
+}
+
+userSchema.statics.sendMessage = async function(userID, chatID, messageContent) {
     try{
         //Find or create the user
-        let user = await this.findById(userID);
+        const user = await this.findById(userID);
 
         if (!user) {
             throw new Error('User not found');
         }
 
         //Find or create the chat
-        let chat = user.chats.find(chat => chat.chatID === chatID);
+        const chat = await Chat.findById(chatID);
 
         if (!chat) {
-            chat = {
-                chatID,
-                participants: [],
-                message: []
-            };
-            user.chats.push(chat);
-        };
+            throw new Error('Chat not found');
+        }
 
         // Add the message to the chat
         const message = {
+            chatID: chatID,
             sender: userID,
             content: messageContent,
             timestamp: new Date()
         };
 
-        chat.messages.push(message);
+        const result = await Chat.addNewMessage(message);
 
-        await user.save();
-
-        return user;
+        return { chatID: chatID, message: result };
     }
     catch (err) {
         console.error(err);
         throw new Error(err);
     }
+}
+
+userSchema.statics.login = async function (email, password) {
+    const user = await this.findOne({ email });
+    if (user) {
+        const auth = await bcrypt.compare(password, user.password);
+        if (auth) {
+            return user;
+        }
+    }
+
+    throw Error('Incorrect credentials');
 }
 
 const User = mongoose.model('User', userSchema);
