@@ -124,11 +124,11 @@ const Message = () => {
                     <div className="Icons">Icons go here</div>
                 </div>
 
-                <div className="Profile">
-                    <img className="Profile-Pic" alt="profile pic"></img>
+                <div className="Profile2">
+                    <img className="profileimage" src='./images/jungkook.jpg' alt="jung kook"></img>
                     <div>
-                        <h4>John Doe</h4>
-                        <p>johndoe@email.com</p>
+                        <h4>Jung Kook</h4>
+                        <p>BTSJK@email.com</p>
                     </div>
                 </div>
 

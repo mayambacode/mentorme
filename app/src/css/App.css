@@ -88,6 +88,11 @@ max-width: 5%;
 max-height: 5%; 
 }
 
+.img {
+  max-width: 5%;
+  max-height: 5%; 
+  }
+
 #Login {
   padding-top: 14%;
 }
@@ -133,8 +138,9 @@ max-height: 5%;
   width: clamp(180px, 100%, 360px);
   display: flex;
   border-radius: 8px;
-  background: linear-gradient(to right, #486fcb 4%, #ececec 4%);}
-
+  background: linear-gradient(to right, #486fcb 4%, #ececec 4%);
+  position: relative;
+}
 .Card-List {
   list-style-type: none;
   text-align: left;
@@ -225,6 +231,34 @@ ul, ol {
   text-overflow: ellipsis;
 }
 
-.Profile {
+.Profile2 {
   display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  width: 200px;
+  height: 84px;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.Profile h4{
+
+  font-size: 18px;
+}
+
+.profileimage {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  border-radius: 50%;
+
+}
+
+.profileimage2 {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  left: 180px;
 }
