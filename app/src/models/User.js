@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 
 const messageSchema = new mongoose.Schema({
     sender: {
@@ -26,15 +27,15 @@ const chatSchema = new mongoose.Schema({
 });
 
 const userSchema = new mongoose.Schema({
-    userID: {
-        type: String,
-        required: true,
-        unique: true
-    },
     email: {
         type: String, 
         required: true,
         unique: true
+    },
+    password: {
+        type: String,
+        require: true,
+        minLength: [6, 'Minimum password length is 6']
     },
     chats: [chatSchema],
     year: {
@@ -86,6 +87,18 @@ userSchema.statics.sendMessage = async (userID, chatID, messageContent) => {
         console.error(err);
         throw new Error(err);
     }
+}
+
+userSchema.statics.login = async function (email, password) {
+    const user = await this.findOne({ email });
+    if (user) {
+        const auth = await bcrypt.compare(password, user.password);
+        if (auth) {
+            return user;
+        }
+    }
+
+    throw Error('Incorrect credentials');
 }
 
 const User = mongoose.model('User', userSchema);

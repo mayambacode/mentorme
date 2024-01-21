@@ -1,26 +1,28 @@
 import User from '../models/User.js';
+import authHelper from '../helpers/authentication.js';
 
-const login = async (req, res) => {
+const signup = async (req, res) => {
     const { email, password } = req.body;
 
     try{
-        
-        res.status(200).json();
+        const hashedpwd = await authHelper.hashpwd(password);
+        const user = await User.create({email: email, password: hashedpwd});
+        res.status(200).json(user);
     }
     catch (err) {
         res.status(400).json({ message: err.message });
     }
 }
 
-const signup = async (req, res) => {
+const login = async (req, res) => {
     const { email, password } = req.body;
 
     try{
-        
-
-        res.status(200).json();
+        const user = await User.login(email, password);
+        res.status(200).json(user);
     }
     catch (err) {
+        console.log(err);
         res.status(400).json({ message: err.message });
     }
 }

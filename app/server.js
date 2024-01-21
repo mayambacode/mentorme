@@ -7,14 +7,15 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+app.use(express.json());
+
 mongoose.connect(process.env.MDB_URL)
 .then((result) => {
     console.log(`API listening on port ${PORT}`);
-    app.use(express.json());
+    app.listen(PORT);
 })
 .catch((err) => {
     console.log(err);
 });
 
-app.listen(PORT);
 app.use(routes);
