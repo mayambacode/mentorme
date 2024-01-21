@@ -17,7 +17,7 @@ const Login = () => {
         <div className="d-flex align-items-center">
             <Link className='btn button-primary' href="app\src\views\Signup.js">
         <div className="signup">
-            <Link to="/Signup.js">
+            <Link to="/Signup.js"/>
                Sign Up
             </Link>
         </div>
