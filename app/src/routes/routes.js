@@ -9,6 +9,7 @@ routes.post("/api/signup", auth.signup);
 routes.post("/api/logout", auth.logout);
 
 routes.post("/api/sendMessage", chat.sendMessage);
-routes.post("/api/createRoom", chat.startChat);
+routes.post("/api/startChat", chat.startChat);
+routes.post("/api/test", chat.test);
 
 export default routes;

@@ -10,10 +10,18 @@ const chatSchema = new mongoose.Schema({
 chatSchema.statics.addNewMessage = async function(message) {
     try{
         const chatID = message.chatID;
-        const chat = await this.findOne(chatID);
-        
-        chat.messages.append(message);
-        await chat.save();
+        await this.findByIdAndUpdate(
+            chatID,
+            {
+                $push: {
+                    messages: message
+                }
+            },
+            {
+                new: true
+            }
+        );
+       
         return "Message sent";
     }
     catch (err) {

@@ -25,18 +25,16 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-userSchema.statics.createNewRoom = async function(users) {
+userSchema.statics.createNewRoom = async function(firstUser, secondUser) {
     try {
-        // Finds User objects with the IDs
-        const firstUser = await this.findById(users[0]);
-        const secondUser = await this.findById(users[1]);
         const participants = [
             firstUser,
             secondUser
         ];
 
-        const chat = await Chat.create(participants, []);
-        return { chatID: chat.chatID, message: "Chat created" };
+        const chat = await Chat.create({ participants: participants, messages: [] });
+        const chatID = chat._id.toString();
+        return { chatID: chatID, message: "Chat created" };
     }
     catch (err) {
         throw new Error(err);
@@ -46,14 +44,14 @@ userSchema.statics.createNewRoom = async function(users) {
 userSchema.statics.sendMessage = async function(userID, chatID, messageContent) {
     try{
         //Find or create the user
-        let user = await this.findById(userID);
+        const user = await this.findById(userID);
 
         if (!user) {
             throw new Error('User not found');
         }
 
         //Find or create the chat
-        let chat = await this.findById(chatID);
+        const chat = await Chat.findById(chatID);
 
         if (!chat) {
             throw new Error('Chat not found');
@@ -67,11 +65,9 @@ userSchema.statics.sendMessage = async function(userID, chatID, messageContent) 
             timestamp: new Date()
         };
 
-        let result = await Chat.addNewMessage(message);
+        const result = await Chat.addNewMessage(message);
 
-        await user.save();
-
-        return { chatID: chat.chatID, message: result };
+        return { chatID: chatID, message: result };
     }
     catch (err) {
         console.error(err);
