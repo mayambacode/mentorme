@@ -8,7 +8,7 @@ const Signup = () => {
                 <div className="title">
                     <h1>Welcome to Mentor Me</h1>
                     <h2>Find Your Mentor, Find Your Way</h2>
-                    <img></img>
+                    <img alt="asdasda"></img>
                 </div>
                
                <div className="split right">
@@ -21,7 +21,7 @@ const Signup = () => {
                         <input type="email" className="email" placeholder="Email"></input> <br/>
                         <input type="password" className="password" placeholder="Password"></input><br/> 
                         <input type="password" className="confirmpassword" placeholder="Confirm Password"></input><br/> 
-                        <inpu type="submit" value="Sign Up"></inpu>
+                        <input type="submit" value="Sign Up"></input>
                     </form>
 
                         <div>

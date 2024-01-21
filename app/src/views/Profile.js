@@ -9,7 +9,7 @@ const Profile = () => {
             </div>
 
             <div className="profileimage"> <br></br>
-                <img alt=""></img> <br/>
+                <img alt="hello"></img> <br/>
                 <h2>Name of Profile</h2> <br/>
                 <p>username</p> <br/>
             </div>
@@ -22,7 +22,7 @@ const Profile = () => {
                     <p>Year</p>
                     <p>Future Goals:</p>
                 </ul>
-                <h2></h2>
+                <h2>test</h2>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p><br/>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p> <br/>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p> <br/>
