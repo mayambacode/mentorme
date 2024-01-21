@@ -4,7 +4,7 @@ const Home = () => {
             <div className="Sidebar-Container">
                 <h1>Mentor Me</h1>
                 <nav>
-                    <ul className="d-flex align-items-center">
+                    <ul className="Sidebar-List">
                         <li>Notifications/Feed</li>
                         <li>Messages</li>
                         <li>Connections</li>
@@ -32,11 +32,11 @@ const Home = () => {
                     <div className="Icons"><i class="material-icons">search</i></div>
                 </div>
 
-                <div className="Profile">
-                    <img className="Profile-Pic" alt="profile pic"></img>
+                <div className="Profile2">
+                    <img className="profileimage" src='./images/jungkook.jpg' alt="jung kook"></img>
                     <div>
-                        <h4>John Doe</h4>
-                        <p>johndoe@email.com</p>
+                        <h4>Jung Kook</h4>
+                        <p>BTSJK@email.com</p>
                     </div>
                 </div>
 
@@ -48,7 +48,7 @@ const Home = () => {
                 <div className="Cards">
 
                     <div className="Card">
-                        <img className="Card-Img" alt="A smiling mentor"></img>
+                        <img className="profileimage2" src='./images/jungkook.jpg' alt="jung kook"></img>
                         <div className="Card-Content">
                             <h5>Mentor #1</h5>
                             <ul className="Card-List">
