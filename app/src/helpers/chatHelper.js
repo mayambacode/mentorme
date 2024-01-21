@@ -1,4 +1,4 @@
-const createMessage = (event, userID) => {
+export const createMessage = (event, userID) => {
     event.preventDefault();
 
     const messageInfo = {
@@ -10,5 +10,3 @@ const createMessage = (event, userID) => {
 
     //Call the api to send the message
 }
-
-module.exports = { createMessage };
