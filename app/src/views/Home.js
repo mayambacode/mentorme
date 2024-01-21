@@ -4,7 +4,7 @@ const Home = () => {
             <div className="Sidebar-Container">
 
                 <nav>
-                    <ul className="Sidebar-List">
+                    <ul className="d-flex align-items-center">
                         <li>Notifications/Feed</li>
                         <li>Messages</li>
                         <li>Connections</li>
