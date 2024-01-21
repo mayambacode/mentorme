@@ -18,7 +18,7 @@ const Profile = () => {
                 <h2>Jung Kook</h2> <br/>
             </div>
         <div className='friendlist'>
-            <h3>Friend List</h3>
+            <h3>Friend List</h3> 
         <img id='justin' src='./images/justinbeiber.jpg' alt="justin beiber"></img> <br/>
         <h5>Justin Beiber</h5>
         <img id='tom' src='./images/tomholland.jpg' alt="tom holland"></img> <br/>
