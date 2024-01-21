@@ -204,5 +204,5 @@ max-height: 5%;
 
 .Profile {
   display: flex;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }

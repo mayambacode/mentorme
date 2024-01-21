@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/Profile.css';
 
 const Profile = () => {
@@ -5,8 +6,12 @@ const Profile = () => {
         <div className="Profile">
 
             <div className="corner">
-               <h2>Home</h2><br/>
-            </div>
+                <ul className='nav'>
+                 <Link to="/Home"><h4 className='homenav'>Home</h4></Link> 
+                 <Link to="/Message"><h4 className='homenav'>Message</h4></Link> 
+                 <Link to=""><h4 className='homenav'>About</h4></Link> 
+                </ul>
+            </div><br/>
 
             <div className="profileimage"> <br></br>
                 <img alt=""></img> <br/>
