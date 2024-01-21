@@ -29,5 +29,15 @@ chatSchema.statics.addNewMessage = async function(message) {
     }
 }
 
+chatSchema.statics.getMessages = async function(chatID) {
+    try{
+        const messages = this.findOne({ _id: chatID}).populate('messages');
+        return messages;
+    }
+    catch (err) {
+        throw new Error(err);
+    }
+}
+
 const Chat = mongoose.model('Chat', chatSchema);
 export default Chat;
