@@ -1,6 +1,18 @@
-import { createMessage } from '../helpers/chatHelper';
 
 const Message = () => {
+    const createMessage = (event, userID) => {
+        event.preventDefault();
+    
+        const messageInfo = {
+            userID: userID,
+            content: event.target.parentElement.firstChild.valuem
+        };
+    
+        event.target.parentElement.firstChild.value = '';
+    
+        //Call the api to send the message
+    }
+
     return (
         <div className="Message">
             <div className="Sidebar-Container">

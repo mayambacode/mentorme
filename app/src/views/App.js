@@ -1,9 +1,10 @@
 import '../css/App.css';
-import Home from './Home';
-import Signup from './Signup';
-import Profile from './Profile';
-import Message from './Message';
-import Login from './Login';
+import '../css/Login.css';
+import Home from './Home.js';
+import Signup from './Signup.js';
+import Profile from './Profile.js';
+import Message from './Message.js';
+import Login from './Login.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
