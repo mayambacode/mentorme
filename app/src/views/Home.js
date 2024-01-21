@@ -29,7 +29,7 @@ const Home = () => {
 
                 <div className="Header-Container">
                     <input type="text"></input>
-                    <div className="Icons">Icons go here</div>
+                    <div className="Icons"><i class="material-icons">search</i></div>
                 </div>
 
                 <div className="Profile">
