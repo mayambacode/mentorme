@@ -206,3 +206,10 @@
     display: flex;
     border: 2px solid red;
   }
+
+.New-Conversation-Button {
+  height: 48px;
+  width: 48px;
+  border-radius: 12px;
+  background-color: red;
+}

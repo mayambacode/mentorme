@@ -2,9 +2,9 @@ const Home = () => {
     return (
         <div className="Home">
             <div className="Sidebar-Container">
-
+                <h1>Mentor Me</h1>
                 <nav>
-                    <ul className="Sidebar-List">
+                    <ul className="d-flex align-items-center">
                         <li>Notifications/Feed</li>
                         <li>Messages</li>
                         <li>Connections</li>
@@ -25,7 +25,7 @@ const Home = () => {
 
             <div className="Header-Container">
 
-                <h1>Mentor List</h1>
+                <h2>Mentor List</h2>
 
                 <div className="Header-Container">
                     <input type="text"></input>
