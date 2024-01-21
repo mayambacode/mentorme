@@ -4,7 +4,7 @@ const Profile = () => {
     return(
         <div className="Profile">
 
-            <div className="d-flex justify-content-start">
+            <div className="corner">
                <h2>Home</h2><br/>
             </div>
 
@@ -22,7 +22,7 @@ const Profile = () => {
                     <p>Year</p>
                     <p>Future Goals:</p>
                 </ul>
-                <h2></h2>
+                <h2>Summary</h2>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p><br/>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p> <br/>
                 <p>ksfdj;lasdkjgflkad;jgkl;s</p> <br/>

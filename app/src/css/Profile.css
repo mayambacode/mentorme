@@ -9,8 +9,10 @@
   }
   
   .profileimage {
-    width: 20%;
     text-align: center;
+    position: relative;
+    left: 230px;
+
   }
   
   .profileimage img {
@@ -20,8 +22,11 @@
   }
   
   .aboutme {
-    width: 50%;
+   
     margin-top: 20px;
+    position: relative;
+    top: 200px;
+    left: 50px;
   }
   
   ul#schoolprofile {
@@ -36,3 +41,6 @@
   
   /* Add more styling as needed for the about me section */
   
+  p {
+
+  }
