@@ -18,7 +18,7 @@ const Login = () => {
             <Link className='btn button-primary' href="app\src\views\Signup.js"/>
             <div className="signup"><div></div>
                 <Link to="/Signup.js">
-                Sign Up
+                Sign Up me
                 </Link>
             </div>
         </div>
