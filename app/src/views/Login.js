@@ -15,20 +15,14 @@ const Login = () => {
         </form>
         
         <div className="d-flex align-items-center">
-            <Link className='btn button-primary' href="app\src\views\Signup.js">
-        <div className="signup">
-            <Link to="/Signup.js"/>
-               Sign Up
-            </Link>
+            <Link className='btn button-primary' href="app\src\views\Signup.js"/>
+            <div className="signup"><div></div>
+                <Link to="/Signup.js">
+                Sign Up
+                </Link>
+            </div>
         </div>
-
-        {/* <div>
-           <a href="">
-                <button></button>
-            </a>
-        </div> */}
-
-        </div>
+    </div>
     );
 }
 
