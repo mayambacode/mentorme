@@ -14,15 +14,21 @@ const Profile = () => {
             </div><br/>
 
             <div className="profileimage"> <br></br>
-                <img src='./images/jungkook.jpg' alt="jung kook"></img> <br/>
+            <img src='./images/jungkook.jpg' alt="jung kook"></img> <br/>
                 <h2>Jung Kook</h2> <br/>
             </div>
         <div className='friendlist'>
-            <img></img>
-            <img></img>
-            <img></img>
-            <img></img>
+            <h3>Friend List</h3>
+        <img id='justin' src='./images/justinbeiber.jpg' alt="justin beiber"></img> <br/>
+        <h5>Justin Beiber</h5>
+        <img id='tom' src='./images/tomholland.jpg' alt="tom holland"></img> <br/>
+        <h5>Tom Holland</h5>
+        <img id='michael' src='./images/michael.jpg' alt="michael b jordan"></img> <br/>
+        <h5>Michael B. Jordan</h5>
+        <img id='iman' src='./images/iman.jpg' alt="iman vellani"></img> <br/>
+        <h5>Iman Vellani</h5>
         </div>
+
             <div className="aboutme"> <br/> <br/><br/><br/>
                 <h2>About Me</h2> <br/>
                 <ul id="schoolprofile">

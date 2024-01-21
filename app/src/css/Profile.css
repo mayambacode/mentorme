@@ -33,6 +33,8 @@
   .aboutme {
     top: 50px;
     margin-top: -50px;
+    float: center; 
+    
 
    
 
@@ -96,4 +98,17 @@ h4 Link {
 }
 .paragraph {
     margin:30px;
+}
+
+.friendlist {
+    text-align: left;
+     width: 100px;
+     float: left;
+     height: 300px;
+}
+
+#justin, #michael, #tom, #iman {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px; /* Adjust the size as needed */
+    border-radius: 10%;
 }
