@@ -16,6 +16,7 @@ const Message = () => {
     return (
         <div className="Message">
             <div className="Sidebar-Container">
+                <h1>Mentor Me</h1>
 
                 <nav>
                     <ul className="Sidebar-List">
@@ -38,7 +39,7 @@ const Message = () => {
 
             <div className="Header-Container">
 
-                <h1>Mentor List</h1>
+                <h2>Mentor List</h2>
 
                 <div className="Header-Container">
                     <input type="text"></input>
@@ -129,28 +130,36 @@ const Message = () => {
             
             <div className="Current-Container">
 
-                <div className="Messager">
-                    <img alt="Profile Pic"></img>
-                    <div>
-                        <h5>Senior_Student</h5>
-                        <p>ok have a nice day. it was really nice speaking to you.</p>
+                <div className='Active-Conversations'>
+
+                    <div className="Messager">
+                        <img alt="Profile Pic"></img>
+                        <div>
+                            <h5>Senior_Student</h5>
+                            <p>ok have a nice day. it was really nice speaking to you.</p>
+                        </div>
+                    </div>
+
+                    <div className="Messager">
+                        <img alt="Profile Pic"></img>
+                        <div>
+                            <h5>Professor</h5>
+                            <p>Hi, how are you?</p>
+                        </div>
+                    </div>
+
+                    <div className="Messager">
+                        <img alt="Profile Pic"></img>
+                        <div>
+                            <h5>Campus Leader</h5>
+                            <p>Thanks for the advice!</p>
+                        </div>
                     </div>
                 </div>
 
-                <div className="Messager">
-                    <img alt="Profile Pic"></img>
-                    <div>
-                        <h5>Professor</h5>
-                        <p>Hi, how are you?</p>
-                    </div>
-                </div>
-
-                <div className="Messager">
-                    <img alt="Profile Pic"></img>
-                    <div>
-                        <h5>Campus Leader</h5>
-                        <p>Thanks for the advice!</p>
-                    </div>
+                <div className='New-Conversation'>
+                    <p>New Conversation</p>
+                    <a className='New-Conversation-Button'>+</a>
                 </div>
 
             </div>
