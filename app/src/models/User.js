@@ -13,6 +13,9 @@ const userSchema = new mongoose.Schema({
         require: true,
         minLength: [6, 'Minimum password length is 6']
     },
+    isLoggedIn: {
+        type: Number
+    },
     chats: [Number],
     year: {
         type: Number
@@ -37,7 +40,7 @@ userSchema.statics.createNewRoom = async function(firstUser, secondUser) {
         return { chatID: chatID, message: "Chat created" };
     }
     catch (err) {
-        throw new Error(err);
+        throw new Error('Could not start a chat');
     }
 }
 
@@ -71,7 +74,7 @@ userSchema.statics.sendMessage = async function(userID, chatID, messageContent) 
     }
     catch (err) {
         console.error(err);
-        throw new Error(err);
+        throw new Error('Could not send message');
     }
 }
 
@@ -80,11 +83,22 @@ userSchema.statics.login = async function (email, password) {
     if (user) {
         const auth = await bcrypt.compare(password, user.password);
         if (auth) {
+            await this.updateOne({ email }, { $set: { isLoggedIn: 1 }});
             return user;
         }
     }
 
     throw Error('Incorrect credentials');
+}
+
+userSchema.statics.logout = async function (userID) {
+    try {
+        const result = await this.updateOne({ _id: userID }, { $set: { isLoggedIn: 0 }});
+        return result;
+    }
+    catch (err) {
+        throw new Error('Logout failed');
+    }
 }
 
 const User = mongoose.model('User', userSchema);
